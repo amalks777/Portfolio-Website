@@ -6,23 +6,40 @@
     <title>My Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <section id="home" class="gradient-background">
-     <div class="container fixed-top">
-       <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-         <span class="fs-2 ps-5 text-light fw-bold">PORTFOLIO</span>
-          </a>
-            <ul class="nav nav-pills text-light fs-5" id="navlist">
-              <li class="nav-item"><a href="#home" class="nav-link text-light" aria-current="page">Home</a></li>
-              <li class="nav-item"><a href="#about" class="nav-link text-light">About</a></li>
-              <li class="nav-item"><a href="#Skills" class="nav-link text-light">Skills</a></li>
-              <li class="nav-item"><a href="#Contact" class="nav-link text-light">Contact</a></li>
-            </ul>
-        </header>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+  <body>
+    <section id="home" class="gradient-background">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand fs-4 fw-bold ps-3" href="#">PORTFOLIO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact">Contact</a>
+              </li>
+          </div>
+        </div>
       </div>
-      <div class="pt-5 pb-5"></div>
+    </nav>
+    <div class="pt-5 pb-5"></div>
       <div class="container col-xxl-8 px-4 py-5 text-light border-bottom" id="main">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-7 col-sm-8 col-lg-6">
@@ -39,11 +56,11 @@
              </div>
           </div>
         </div>
-      </div>
+      </div>  
    </section> 
 
 
-   <section id="about" class="gradient-background pt-3">
+   <section id="about" class="gradient-background pt-3 overflow-auto">
     <div class="container pb-5 border-bottom">
       <div class="row p-5">
         <div class="col-5 pt-5">
@@ -111,38 +128,126 @@
     </div>
     </div>
    </section>
-   <section id="Contact" class="gradient-background">
-    <div class="col-md-10 mx-auto col-lg-5 pt-5">
-      <div class="pt-5 d-flex justify-content-center">
 
-        <h2 class="text-light fs-1 fw-bold border-bottom">CONTACT ME</h2>
-        <!-- <h2 class="text-light ps-5 pb-3">CONTACT ME</h2> -->
+
+
+   <section id="Contact" class="gradient-background text-light">
+     <div class="pt-5 d-flex justify-content-center pb-5">
+       <h2 class="text-light fs-1 fw-bold">Contact</h2>
       </div>
-      <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
-        <div class="form-floating mb-3">
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" value="Amal K S" readonly>
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2 class="pb-3">SignUp</h2>
+            <div class="col-md-7">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Contact Number</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your number">
+              </div>
+              <button class="btn btn-primary w-45 py-2 my-5 px-4" type="submit">
+                SignUp
+              </button>
+              <button class="btn btn-primary w-45 py-2 my-3" type="submit">
+                <a href="./signup.html" class="text-light" style="text-decoration: none;">Login Here</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+            </button>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" value="amalksanthosh2021@gmail.com" readonly>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-body-tertiary border rounded-3 text-dark">
+            <h2 class="pb-3">Contact Me</h2>
+            <div class="mt-3">
+              <div class="d-flex">
+                <i class="bi bi-telephone-fill"></i>
+                <p>Contact : 8080808080</p>
+              </div>
+              </div>
+              <div class="mt-3">
+                <div class="d-flex">
+                  <i class="bi bi-envelope-fill"></i>
+                  <p>Email : aml123@gmail.com</p>
+                </div>
+                </div>
+                <div class="mt-3">
+                  <div class="d-flex">
+                    <i class="bi bi-github"></i>
+                    <p>Github : github.com/amalks777</p>
+                  </div>
+                  </div>
+              
+              
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Github</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" value="github.com/amalks777" readonly>
-          </div>
-        <hr class="my-4"> 
-        <small class="text-body-secondary">If you want to create account,</small><br><br>
-        <button class="btn btn-primary w-50 py-2" type="submit">
-          <a href="./signup.html" class="text-light" style="text-decoration: none;">SignUp Here</a>
+        </div>
+      </div>
+      
+      <!-- <div class="container p-5 border" id="contact">
+    <div class="row w-75" id="row">
+      <h4 class="pb-3 fs-3">SIGNUP</h4>
+      <div class="col-md-7">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Name</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Contact Number</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name">
+        </div>
+        <button class="btn btn-primary w-45 py-2 my-4 px-4" type="submit">
+          SignUp
+        </button>
+        <button class="btn btn-primary w-45 py-2 my-3" type="submit">
+          <a href="./signup.html" class="text-light" style="text-decoration: none;">Login Here</a>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
           </svg>
       </button>
-      </form>
+      </div>
+      <div class="col-md-5 bg-primary pt-5">
+        <h4 class="border-bottom">Contact Us</h4>
+        <div class="mt-3">
+          <div class="d-flex">
+            <i class="bi bi-telephone-fill"></i>
+            <p>Contact : 8080808080</p>
+          </div>
+          </div>
+          <div class="mt-3">
+            <div class="d-flex">
+              <i class="bi bi-telephone-fill"></i>
+              <p>Contact : 8080808080</p>
+            </div>
+            </div>
+          <div class="d-flex">
+            <i class="bi bi-envelope-fill"></i>
+            <p>Email : aml123@gmail.com</p>
+          </div>
+          <div class="d-flex">
+            <i class="bi bi-github"></i>
+            <p>Github : github.com/amalks777</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div> -->
    </section>
+
+
+
 
    <section class="gradient-background">
     <div class="container">
@@ -151,5 +256,6 @@
       </footer>
     </div>
    </section>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

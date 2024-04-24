@@ -16,9 +16,19 @@
       background-position: 0% 50%;
     } */
   }
-  /* ul li:hover {background: #cc3333;} */
 
   #navlist li :hover{
     background: blue;
     border-radius: 30px;
   }
+  #row{
+    box-shadow: white;
+  }
+  /* #contact{
+    width: 60%;
+    padding: 45px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  } */
